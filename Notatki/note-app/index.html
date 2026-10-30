@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Notatki.png" type="image/png">
+    <title>f(x) = Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>f(x) &isin; Notes</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="&exist; search...">
+        </div>
+        <button id="themeToggleBtn" class="btn-secondary">&sum; theme</button>
+    </header>
+
+    <main class="container">
+        <section class="note-form-card">
+            <form id="noteForm">
+                <input type="text" id="noteTitle" placeholder="Lemma / Title..." required autocomplete="off">
+                <textarea id="noteText" placeholder="Formula / Note content..." rows="3" required></textarea>
+
+                <div class="form-actions">
+                    <select id="noteCategory">
+                        <option value="General">&forall; General</option>
+                        <option value="Theory">&sum; Theory</option>
+                        <option value="Practice">&int; Practice</option>
+                        <option value="Draft">&empty; Draft</option>
+                    </select>
+
+                    <button type="submit" class="btn-primary">&plus; Add Note</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="notes-grid" id="notesGrid"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
